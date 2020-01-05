@@ -1,0 +1,23 @@
+﻿@model Vividly.Models.CustomersViewModel
+
+@{
+    ViewBag.Title = "Customers";
+}
+<h2>Customers</h2>
+@if (Model.ShowCustomerNotFound)
+{
+    <p>Customer Not Found!!!</p>
+}
+else 
+{
+<ul>
+    @foreach (var customer in Model.Customers)
+    {
+        <li>
+           <a href="@Url.Action("GetCustomerById", new { id = customer.Id})">@customer.Name</a>
+        </li>
+    }
+</ul>
+}
+
+

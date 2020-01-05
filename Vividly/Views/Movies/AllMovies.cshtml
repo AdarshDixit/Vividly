@@ -1,0 +1,13 @@
+﻿@model Vividly.Models.MoviesViewModel
+
+@{
+    ViewBag.Title = "AllMovies";
+}
+<h2>AllMovies</h2>
+<ul>
+    @foreach (var movie in Model.Movies)
+    {
+        <li>@movie.Name</li>
+    }
+</ul>
+
